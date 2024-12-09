@@ -6,6 +6,7 @@ See LICENSE folder for this sample’s licensing information.
 import Foundation
 
 class QuakeClient {
+    private let quakeCache: NSCache<NSString, CacheEntryObject> = NSCache()
     
     var quakes: [Quake] {
         get async throws {
